@@ -5,11 +5,13 @@ import (
 	"anammaulana/backend-api/models"
 
 	"github.com/gin-gonic/gin"
+	 "github.com/gin-contrib/cors"
 )
 
 func main() {
 	//inisialiasai Gin
 	router := gin.Default()
+	router.Use(cors.Default())
 
 	//panggil koneksi database
 	models.ConnectDatabase()
