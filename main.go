@@ -38,6 +38,13 @@ func main() {
 	//membuat route delete post
 	router.DELETE("/api/posts/:id", controllers.DeletePost)
 
+
+	//membuat route get all Users
+	router.GET("/api/users", controllers.FindUsers)
+
+	//membuat route store post
+	router.POST("/api/users", controllers.StoreUser)
+
 	//mulai server dengan port 3000
 	router.Run(":3000")
 }
